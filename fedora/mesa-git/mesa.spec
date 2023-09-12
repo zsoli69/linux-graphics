@@ -93,12 +93,6 @@ URL:            http://www.mesa3d.org
 
 Source0:        %{build_repo}/-/archive/%{commit}.tar.gz#/mesa-%{commit}.tar.gz
 # src/gallium/auxiliary/postprocess/pp_mlaa* have an ... interestingly worded license.
-# Source1 contains email correspondence clarifying the license terms.
-# Fedora opts to ignore the optional part of clause 2 and treat that code as 2 clause BSD.
-Source1:        Mesa-MLAA-License-Clarification-Email.txt
-
-Patch3:         0003-evergreen-big-endian.patch
-
 
 # Disable rgb10 configs by default:
 # https://bugzilla.redhat.com/show_bug.cgi?id=1560481
