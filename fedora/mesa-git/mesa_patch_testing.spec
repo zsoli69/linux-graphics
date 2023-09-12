@@ -95,9 +95,6 @@ Source0:        %{build_repo}/-/archive/%{commit}.tar.gz#/mesa-%{commit}.tar.gz
 # src/gallium/auxiliary/postprocess/pp_mlaa* have an ... interestingly worded license.
 # Source1 contains email correspondence clarifying the license terms.
 # Fedora opts to ignore the optional part of clause 2 and treat that code as 2 clause BSD.
-Source1:        Mesa-MLAA-License-Clarification-Email.txt
-
-Patch3:         0003-evergreen-big-endian.patch
 
 
 # Disable rgb10 configs by default:
@@ -384,7 +381,6 @@ Headers for development with the Vulkan API.
 %prep
 %setup -q -c
 %autosetup -n mesa-%{commit} -p1
-cp %{SOURCE1} docs/
 
 %build
 # ensure standard Rust compiler flags are set
@@ -463,7 +459,6 @@ done
 popd
 
 %files filesystem
-%doc docs/Mesa-MLAA-License-Clarification-Email.txt
 %dir %{_libdir}/dri
 %if 0%{?with_hardware}
 %if 0%{?with_vdpau}

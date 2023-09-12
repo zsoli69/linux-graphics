@@ -456,7 +456,6 @@ done
 popd
 
 %files filesystem
-%doc docs/Mesa-MLAA-License-Clarification-Email.txt
 %dir %{_libdir}/dri
 %if 0%{?with_hardware}
 %if 0%{?with_vdpau}
