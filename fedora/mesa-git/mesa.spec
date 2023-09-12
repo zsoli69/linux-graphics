@@ -378,7 +378,6 @@ Headers for development with the Vulkan API.
 %prep
 %setup -q -c
 %autosetup -n mesa-%{commit} -p1
-cp %{SOURCE1} docs/
 
 %build
 # ensure standard Rust compiler flags are set
